@@ -205,6 +205,78 @@ a {
   background: rgba(255, 253, 251, 0.62);
 }
 
+.mini-visual {
+  position: relative;
+  width: 100%;
+  height: 124px;
+  margin: 0 0 28px;
+  border-radius: 16px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 28% 45%, rgba(255, 253, 251, 0.86), transparent 28%),
+    linear-gradient(135deg, rgba(232, 239, 233, 0.96), rgba(243, 231, 226, 0.92));
+}
+
+.mini-visual::before,
+.mini-visual::after,
+.mini-visual span {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+}
+
+.breath-visual::before {
+  width: 86px;
+  height: 86px;
+  left: 50%;
+  top: 50%;
+  border: 1px solid rgba(109, 129, 114, 0.38);
+  transform: translate(-50%, -50%);
+}
+
+.breath-visual::after {
+  width: 132px;
+  height: 132px;
+  left: 50%;
+  top: 50%;
+  border: 1px solid rgba(155, 111, 98, 0.24);
+  transform: translate(-50%, -50%);
+}
+
+.breath-visual span {
+  width: 30px;
+  height: 30px;
+  left: calc(50% - 15px);
+  top: calc(50% - 15px);
+  background: var(--sage);
+  opacity: 0.78;
+}
+
+.result-visual::before {
+  width: 170px;
+  height: 170px;
+  right: -48px;
+  top: -76px;
+  border: 1px solid rgba(109, 129, 114, 0.32);
+}
+
+.result-visual::after {
+  width: 118px;
+  height: 118px;
+  left: -28px;
+  bottom: -56px;
+  border: 1px solid rgba(155, 111, 98, 0.26);
+}
+
+.result-visual span {
+  width: 76px;
+  height: 76px;
+  left: calc(50% - 38px);
+  top: calc(50% - 38px);
+  background: rgba(255, 253, 251, 0.66);
+  border: 1px solid rgba(155, 111, 98, 0.22);
+}
+
 .intro,
 .pause,
 .result {
@@ -252,7 +324,7 @@ h2 {
 .step-actions {
   display: flex;
   gap: 12px;
-  margin-top: 28px;
+  margin-top: 36px;
 }
 
 .step-actions .secondary-btn {
@@ -270,6 +342,10 @@ h2 {
   color: var(--muted);
   font-size: 17px;
   line-height: 1.8;
+}
+
+.intro > .primary-btn {
+  margin-top: 36px;
 }
 
 .info-pills {
@@ -405,6 +481,10 @@ h2 {
   gap: 12px;
 }
 
+.result-actions {
+  margin-top: 30px;
+}
+
 .nav-row .primary-btn {
   flex: 1;
 }
@@ -439,7 +519,7 @@ h2 {
 }
 
 .score-band {
-  padding: 12px 0;
+  padding: 14px 0;
   border-top: 1px solid #eee6e0;
 }
 
@@ -461,6 +541,7 @@ h2 {
 .score-band span {
   color: var(--muted);
   font-size: 13px;
+  margin-top: 4px;
 }
 
 .score-band.is-current {
@@ -496,6 +577,10 @@ h2 {
   color: var(--muted);
   font-size: 15px;
   line-height: 1.85;
+}
+
+.guide-card .primary-btn {
+  margin-top: 20px;
 }
 
 .guide-hint {
