@@ -1,0 +1,396 @@
+:root {
+  color-scheme: light;
+  --ink: #302a27;
+  --muted: #70645e;
+  --soft: #9b8e86;
+  --paper: #fffdfb;
+  --panel: #ffffff;
+  --line: #e6ddd6;
+  --accent: #9b6f62;
+  --accent-dark: #7d584e;
+  --accent-soft: #f3e7e2;
+  --sage: #6d8172;
+  --sage-soft: #e8efe9;
+  --shadow: 0 22px 70px rgba(48, 42, 39, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+  color: var(--ink);
+  background:
+    linear-gradient(135deg, rgba(232, 239, 233, 0.95), rgba(255, 253, 251, 0.74) 46%, rgba(243, 231, 226, 0.9)),
+    #f8f2ed;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app-shell {
+  width: min(1120px, 100%);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 48px 28px;
+  display: grid;
+  grid-template-columns: minmax(280px, 0.92fr) minmax(340px, 1fr);
+  gap: 28px;
+  align-items: center;
+}
+
+.hero-panel,
+.quiz-panel {
+  border: 1px solid rgba(255, 255, 255, 0.68);
+  background: rgba(255, 253, 251, 0.78);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.hero-panel {
+  min-height: 640px;
+  padding: 48px;
+  border-radius: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.brand-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--sage);
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 34px;
+  background: rgba(255, 255, 255, 0.52);
+}
+
+.brand-mark {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--sage);
+  box-shadow: 0 0 0 5px rgba(109, 129, 114, 0.12);
+}
+
+.hero-panel h1 {
+  margin: 0;
+  max-width: 9em;
+  font-size: clamp(40px, 5.2vw, 68px);
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.hero-panel p {
+  max-width: 520px;
+  margin: 28px 0 0;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.privacy-note {
+  width: fit-content;
+  margin-top: 34px;
+  padding: 14px 16px;
+  border-left: 4px solid var(--sage);
+  background: var(--sage-soft);
+  color: #4f6356;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.quiz-panel {
+  min-height: 640px;
+  border-radius: 28px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.progress-wrap {
+  margin-bottom: 18px;
+}
+
+.progress-meta {
+  display: flex;
+  justify-content: space-between;
+  color: var(--soft);
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.progress-track {
+  height: 6px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #eee6e0;
+}
+
+.progress-bar {
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--sage), var(--accent));
+  transition: width 220ms ease;
+}
+
+.card {
+  flex: 1;
+  border-radius: 20px;
+  background: var(--panel);
+  padding: 42px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 12px 34px rgba(48, 42, 39, 0.08);
+}
+
+.intro,
+.pause,
+.result {
+  animation: rise 260ms ease;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.soft-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  margin-bottom: 24px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 28px;
+  line-height: 1;
+}
+
+h2 {
+  margin: 0;
+  font-size: 27px;
+  line-height: 1.34;
+  letter-spacing: 0;
+}
+
+.intro p,
+.pause p,
+.result-copy p {
+  margin: 20px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.notice {
+  margin: 26px 0;
+  padding: 16px;
+  border-radius: 8px;
+  background: #f7f1ee;
+  color: #7c6d65;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.primary-btn,
+.secondary-btn,
+.option-btn {
+  min-height: 50px;
+  border-radius: 8px;
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+  transition: transform 140ms ease, background 140ms ease, border-color 140ms ease;
+}
+
+.primary-btn {
+  width: 100%;
+  padding: 15px 18px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+}
+
+.primary-btn:hover {
+  background: var(--accent-dark);
+}
+
+.primary-btn:disabled {
+  cursor: not-allowed;
+  background: #d8cec8;
+}
+
+.secondary-btn {
+  padding: 14px 18px;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.icon-btn {
+  width: 54px;
+  padding: 0;
+  flex: 0 0 54px;
+  font-size: 20px;
+}
+
+.primary-btn:active,
+.secondary-btn:active,
+.option-btn:active {
+  transform: translateY(1px);
+}
+
+.question-kicker,
+.result-level {
+  margin: 0 0 14px;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.question-title {
+  min-height: 5.2em;
+  font-size: 24px;
+  line-height: 1.55;
+}
+
+.options {
+  display: grid;
+  gap: 12px;
+  margin: 30px 0 24px;
+}
+
+.option-btn {
+  width: 100%;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink);
+  text-align: left;
+  line-height: 1.5;
+}
+
+.option-btn:hover,
+.option-btn.is-selected {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.nav-row,
+.result-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.nav-row .primary-btn {
+  flex: 1;
+}
+
+.nav-row .icon-btn[hidden] {
+  display: none;
+}
+
+.score-line {
+  margin: 14px 0 0;
+  color: var(--soft);
+  font-size: 14px;
+}
+
+.result-copy {
+  margin-top: 10px;
+}
+
+.link-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.result-actions .secondary-btn {
+  flex: 0 0 128px;
+}
+
+@media (max-width: 860px) {
+  .app-shell {
+    min-height: auto;
+    padding: 18px;
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .hero-panel {
+    min-height: auto;
+    padding: 34px 26px;
+    border-radius: 22px;
+  }
+
+  .hero-panel h1 {
+    font-size: 38px;
+    max-width: 8em;
+  }
+
+  .hero-panel p {
+    font-size: 16px;
+  }
+
+  .quiz-panel {
+    min-height: 560px;
+    padding: 14px;
+    border-radius: 22px;
+  }
+
+  .card {
+    padding: 28px 22px;
+    border-radius: 16px;
+  }
+
+  h2,
+  .question-title {
+    font-size: 22px;
+  }
+
+  .question-title {
+    min-height: auto;
+  }
+
+  .nav-row,
+  .result-actions {
+    flex-direction: column;
+  }
+
+  .icon-btn {
+    width: 100%;
+    flex-basis: auto;
+  }
+
+  .result-actions .secondary-btn {
+    flex-basis: auto;
+  }
+}
