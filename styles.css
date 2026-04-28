@@ -105,14 +105,18 @@ a {
 }
 
 .privacy-note {
-  width: fit-content;
+  width: min(520px, 100%);
   margin-top: 34px;
-  padding: 14px 16px;
+  padding: 16px 18px;
   border-left: 4px solid var(--sage);
   background: var(--sage-soft);
   color: #4f6356;
   font-size: 14px;
-  line-height: 1.7;
+  line-height: 1.75;
+}
+
+.privacy-note strong {
+  color: #354a3b;
 }
 
 .quiz-panel {
