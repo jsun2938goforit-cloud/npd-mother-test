@@ -320,17 +320,106 @@ h2 {
   margin: 14px 0 0;
   color: var(--soft);
   font-size: 14px;
+  line-height: 1.75;
 }
 
 .result-copy {
   margin-top: 10px;
 }
 
-.link-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
+.score-guide {
+  margin-top: 26px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fffaf7;
+}
+
+.score-guide h3 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.score-band {
+  padding: 12px 0;
+  border-top: 1px solid #eee6e0;
+}
+
+.score-band:first-child {
+  border-top: 0;
+}
+
+.score-band strong,
+.score-band span {
+  display: block;
+  line-height: 1.65;
+}
+
+.score-band strong {
+  color: var(--ink);
+  font-size: 14px;
+}
+
+.score-band span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.score-band.is-current {
+  margin: 0 -10px;
+  padding: 12px 10px;
+  border-radius: 8px;
+  border-top-color: transparent;
+  background: var(--sage-soft);
+}
+
+.guide-panel {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  padding: 22px;
+  background: rgba(48, 42, 39, 0.38);
+  backdrop-filter: blur(8px);
+}
+
+.guide-card {
+  position: relative;
+  width: min(440px, 100%);
+  padding: 34px;
+  border-radius: 18px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.guide-card p {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.guide-hint {
+  padding: 14px;
+  border-radius: 8px;
+  background: #f7f1ee;
+}
+
+.close-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 999px;
+  background: #f7f1ee;
+  color: var(--soft);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
 }
 
 .result-actions .secondary-btn {

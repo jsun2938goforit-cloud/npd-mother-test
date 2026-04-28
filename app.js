@@ -1,5 +1,3 @@
-const GUIDE_LINK = "https://example.com";
-
 const questions = [
   "当你跟她说你很累、很难过，她会把话题转回到自己身上，或者说「你有什么好累的，我才累」？",
   "你生病、失败、或者遇到困难的时候，她的第一反应是担心你，还是担心这件事会让她难堪、或者增加她的麻烦？",
@@ -68,6 +66,7 @@ const progressWrap = document.querySelector("#progressWrap");
 const progressBar = document.querySelector("#progressBar");
 const progressLabel = document.querySelector("#progressLabel");
 const progressCount = document.querySelector("#progressCount");
+let guidePanel = null;
 
 function cloneTemplate(id) {
   return document.querySelector(id).content.cloneNode(true);
@@ -156,11 +155,11 @@ function renderResult() {
   const result = results.find((item) => score >= item.min && score <= item.max) || results[2];
   const fragment = cloneTemplate("#resultTemplate");
   const copy = fragment.querySelector("#resultCopy");
+  const scoreBands = fragment.querySelector("#scoreBands");
 
   fragment.querySelector("#resultLevel").textContent = result.level;
   fragment.querySelector("#resultTitle").textContent = result.title;
-  fragment.querySelector("#scoreLine").textContent = `本次得分：${score} / 24。分数只在当前页面计算，不会被保存。`;
-  fragment.querySelector("#guideLink").href = GUIDE_LINK;
+  fragment.querySelector("#scoreLine").textContent = `本次得分：${score} / 24，对应「${result.level}」。你的回答属于你的隐私，页面不会记录这次结果。`;
 
   result.body.forEach((paragraph) => {
     const p = document.createElement("p");
@@ -168,7 +167,29 @@ function renderResult() {
     copy.append(p);
   });
 
+  results.forEach((item) => {
+    const band = document.createElement("div");
+    band.className = item === result ? "score-band is-current" : "score-band";
+    band.innerHTML = `
+      <strong>${item.min}-${item.max} 分｜${item.level}</strong>
+      <span>${item.title}</span>
+    `;
+    scoreBands.append(band);
+  });
+
   card.append(fragment);
+}
+
+function openGuidePanel() {
+  if (guidePanel) return;
+  guidePanel = cloneTemplate("#guideTemplate").firstElementChild;
+  document.body.append(guidePanel);
+}
+
+function closeGuidePanel() {
+  if (!guidePanel) return;
+  guidePanel.remove();
+  guidePanel = null;
 }
 
 function start() {
@@ -218,10 +239,17 @@ card.addEventListener("click", (event) => {
     render();
   }
   if (action === "restart") restart();
+  if (action === "guide") openGuidePanel();
   if (action === "select") {
     answers[questionIndex] = Number(target.dataset.score);
     render();
   }
+});
+
+document.addEventListener("click", (event) => {
+  const target = event.target.closest("[data-action]");
+  if (!target) return;
+  if (target.dataset.action === "close-guide") closeGuidePanel();
 });
 
 render();

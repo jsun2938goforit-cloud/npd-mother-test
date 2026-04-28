@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="一个关于母女关系与NPD特征的匿名自测工具。结果仅在本地页面计算，不保存、不上传。">
+  <meta name="description" content="一个关于母女关系与NPD特征的自我觉察测试。你的回答属于你的隐私，页面不会收集个人信息。">
   <title>测一测：你的妈妈是NPD吗？</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -20,7 +20,7 @@
         放到一个更清晰的位置上看一看。
       </p>
       <div class="privacy-note">
-        不登录、不收集姓名、不上传答案、不保存结果。
+        你的回答属于你的隐私。我们不会收集你的个人信息，也不会记录你的测试答案，请放心作答。
       </div>
     </section>
 
@@ -51,7 +51,7 @@
         下面 12 个问题没有标准答案。请按照你真实经历里的频率来选。
       </p>
       <div class="notice">
-        本测试仅供自我觉察参考，不构成心理诊断。如你正处在严重焦虑、抑郁、自伤风险或现实危险中，请优先联系专业人士或当地紧急支持。
+        本测试仅供自我觉察参考，不构成心理诊断。每题按「经常这样」2 分、「偶尔这样」1 分、「几乎没有」0 分计算，总分 24 分。
       </div>
       <button class="primary-btn" type="button" data-action="start">开始自测</button>
     </div>
@@ -95,14 +95,35 @@
       <h2 id="resultTitle"></h2>
       <p class="score-line" id="scoreLine"></p>
       <div class="result-copy" id="resultCopy"></div>
+      <div class="score-guide">
+        <h3>分数怎么看</h3>
+        <div id="scoreBands"></div>
+      </div>
       <div class="notice">
         这份测试不能定义一段关系，也不能替代专业评估。它能做的是帮你看见模式，并提醒你：不舒服的感受不需要靠标签来证明。
       </div>
       <div class="result-actions">
-        <a class="primary-btn link-btn" href="https://example.com" target="_blank" rel="noopener" id="guideLink">
+        <button class="primary-btn" type="button" data-action="guide">
           查看后续指南
-        </a>
+        </button>
         <button class="secondary-btn" type="button" data-action="restart">重新测试</button>
+      </div>
+    </div>
+  </template>
+
+  <template id="guideTemplate">
+    <div class="guide-panel">
+      <div class="guide-card">
+        <button class="close-btn" type="button" data-action="close-guide" aria-label="关闭">×</button>
+        <p class="result-level">后续指南</p>
+        <h2>如果你想继续往前走</h2>
+        <p>
+          后续指南包含关系模式拆解、边界练习和常见话术。请回到你购买或看到本测试的店铺页面，联系店家咨询领取方式。
+        </p>
+        <p class="guide-hint">
+          你也可以截图当前结果，发送给店家，方便获得更适合你的指南建议。
+        </p>
+        <button class="primary-btn" type="button" data-action="close-guide">我知道了</button>
       </div>
     </div>
   </template>
