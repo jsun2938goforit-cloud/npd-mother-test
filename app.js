@@ -93,6 +93,8 @@ let questionIndex = 0;
 let answers = Array(questions.length).fill(null);
 
 const card = document.querySelector("#card");
+const appShell = document.querySelector("#appShell");
+const heroPanel = document.querySelector("#heroPanel");
 const progressWrap = document.querySelector("#progressWrap");
 const progressBar = document.querySelector("#progressBar");
 const progressLabel = document.querySelector("#progressLabel");
@@ -107,6 +109,12 @@ function showProgress(visible) {
   progressWrap.hidden = !visible;
 }
 
+function updateLayout() {
+  const focusMode = view !== "intro";
+  appShell.classList.toggle("is-focus-mode", focusMode);
+  heroPanel.setAttribute("aria-hidden", focusMode ? "true" : "false");
+}
+
 function updateProgress() {
   const current = questionIndex + 1;
   const percent = (current / questions.length) * 100;
@@ -116,6 +124,7 @@ function updateProgress() {
 }
 
 function render() {
+  updateLayout();
   card.replaceChildren();
 
   if (view === "intro") {

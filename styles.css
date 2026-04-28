@@ -48,6 +48,19 @@ a {
   align-items: center;
 }
 
+.app-shell.is-focus-mode {
+  width: min(680px, 100%);
+  grid-template-columns: 1fr;
+}
+
+.app-shell.is-focus-mode .hero-panel {
+  display: none;
+}
+
+.app-shell.is-focus-mode .quiz-panel {
+  min-height: min(760px, calc(100vh - 96px));
+}
+
 .site-footer {
   width: min(1040px, calc(100% - 36px));
   margin: -24px auto 34px;
@@ -499,6 +512,15 @@ h2 {
     padding: 18px;
     grid-template-columns: 1fr;
     align-items: start;
+  }
+
+  .app-shell.is-focus-mode {
+    min-height: 100vh;
+    padding: 18px;
+  }
+
+  .app-shell.is-focus-mode .quiz-panel {
+    min-height: calc(100vh - 36px);
   }
 
   .site-footer {
