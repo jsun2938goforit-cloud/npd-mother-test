@@ -38,23 +38,16 @@ a {
 }
 
 .app-shell {
-  width: min(1120px, 100%);
+  width: min(680px, 100%);
   min-height: 100vh;
   margin: 0 auto;
-  padding: 48px 28px;
-  display: grid;
-  grid-template-columns: minmax(280px, 0.92fr) minmax(340px, 1fr);
-  gap: 28px;
+  padding: 42px 28px 88px;
+  display: flex;
   align-items: center;
 }
 
 .app-shell.is-focus-mode {
   width: min(680px, 100%);
-  grid-template-columns: 1fr;
-}
-
-.app-shell.is-focus-mode .hero-panel {
-  display: none;
 }
 
 .app-shell.is-focus-mode .quiz-panel {
@@ -62,44 +55,36 @@ a {
 }
 
 .site-footer {
-  width: min(1040px, calc(100% - 36px));
-  margin: -24px auto 34px;
-  padding: 18px 22px;
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  z-index: 5;
+  width: min(680px, calc(100% - 28px));
+  transform: translateX(-50%);
+  padding: 12px 16px;
   border: 1px solid rgba(230, 221, 214, 0.9);
-  border-radius: 12px;
-  background: rgba(255, 253, 251, 0.76);
+  border-radius: 999px;
+  background: rgba(255, 253, 251, 0.92);
   color: var(--muted);
   box-shadow: 0 10px 30px rgba(48, 42, 39, 0.07);
+  backdrop-filter: blur(14px);
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.65;
 }
 
 .site-footer strong {
-  display: block;
+  display: inline;
   color: var(--ink);
   font-size: 14px;
-  margin-bottom: 8px;
+  font-weight: 800;
 }
 
-.site-footer p {
-  margin: 0;
-  font-size: 13px;
-  line-height: 1.85;
-}
-
-.hero-panel,
 .quiz-panel {
   border: 1px solid rgba(255, 255, 255, 0.68);
   background: rgba(255, 253, 251, 0.78);
   box-shadow: var(--shadow);
   backdrop-filter: blur(18px);
-}
-
-.hero-panel {
-  min-height: 640px;
-  padding: 48px;
-  border-radius: 28px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .brand-row {
@@ -125,7 +110,7 @@ a {
   box-shadow: 0 0 0 5px rgba(109, 129, 114, 0.12);
 }
 
-.hero-panel h1 {
+.step-screen h1 {
   margin: 0;
   max-width: 9em;
   font-size: clamp(40px, 5.2vw, 68px);
@@ -133,39 +118,8 @@ a {
   letter-spacing: 0;
 }
 
-.hero-panel p {
-  max-width: 520px;
-  margin: 28px 0 0;
-  color: var(--muted);
-  font-size: 18px;
-  line-height: 1.9;
-}
-
-.privacy-note {
-  width: min(520px, 100%);
-  margin-top: 34px;
-  padding: 16px 18px;
-  border-left: 4px solid var(--sage);
-  background: var(--sage-soft);
-  color: #4f6356;
-  font-size: 14px;
-  line-height: 1.75;
-}
-
-.privacy-note strong {
-  color: #354a3b;
-}
-
-.hero-scroll-hint {
-  display: none;
-  margin-top: 20px;
-  color: var(--sage);
-  font-size: 14px;
-  line-height: 1.7;
-  text-align: center;
-}
-
 .quiz-panel {
+  width: 100%;
   min-height: 640px;
   border-radius: 28px;
   padding: 28px;
@@ -248,6 +202,27 @@ h2 {
   letter-spacing: 0;
 }
 
+.step-kicker {
+  margin: 0 0 12px;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.step-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.step-actions .secondary-btn {
+  flex: 0 0 110px;
+}
+
+.step-actions .primary-btn {
+  flex: 1;
+}
+
 .intro p,
 .pause p,
 .result-copy p {
@@ -265,36 +240,6 @@ h2 {
   color: #7c6d65;
   font-size: 13px;
   line-height: 1.75;
-}
-
-.method-card {
-  margin: 24px 0 0;
-  padding: 18px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: #fffaf7;
-}
-
-.method-card h3 {
-  margin: 0 0 10px;
-  font-size: 16px;
-  line-height: 1.4;
-}
-
-.method-card p,
-.method-card li {
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.8;
-}
-
-.method-card p {
-  margin: 0;
-}
-
-.method-card ul {
-  margin: 12px 0 0;
-  padding-left: 18px;
 }
 
 .primary-btn,
@@ -509,8 +454,7 @@ h2 {
 @media (max-width: 860px) {
   .app-shell {
     min-height: auto;
-    padding: 18px;
-    grid-template-columns: 1fr;
+    padding: 18px 18px 96px;
     align-items: start;
   }
 
@@ -524,27 +468,15 @@ h2 {
   }
 
   .site-footer {
-    width: calc(100% - 36px);
-    margin: 0 auto 22px;
+    width: calc(100% - 24px);
+    bottom: 10px;
+    border-radius: 14px;
+    padding: 10px 12px;
   }
 
-  .hero-panel {
-    min-height: auto;
-    padding: 34px 26px;
-    border-radius: 22px;
-  }
-
-  .hero-panel h1 {
+  .step-screen h1 {
     font-size: 38px;
     max-width: 8em;
-  }
-
-  .hero-panel p {
-    font-size: 16px;
-  }
-
-  .hero-scroll-hint {
-    display: block;
   }
 
   .quiz-panel {
@@ -568,7 +500,8 @@ h2 {
   }
 
   .nav-row,
-  .result-actions {
+  .result-actions,
+  .step-actions {
     flex-direction: column;
   }
 
@@ -578,6 +511,10 @@ h2 {
   }
 
   .result-actions .secondary-btn {
+    flex-basis: auto;
+  }
+
+  .step-actions .secondary-btn {
     flex-basis: auto;
   }
 }

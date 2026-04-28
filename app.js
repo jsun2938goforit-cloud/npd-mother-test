@@ -89,12 +89,12 @@ const results = [
 ];
 
 let view = "intro";
+let introIndex = 0;
 let questionIndex = 0;
 let answers = Array(questions.length).fill(null);
 
 const card = document.querySelector("#card");
 const appShell = document.querySelector("#appShell");
-const heroPanel = document.querySelector("#heroPanel");
 const progressWrap = document.querySelector("#progressWrap");
 const progressBar = document.querySelector("#progressBar");
 const progressLabel = document.querySelector("#progressLabel");
@@ -112,7 +112,6 @@ function showProgress(visible) {
 function updateLayout() {
   const focusMode = view !== "intro";
   appShell.classList.toggle("is-focus-mode", focusMode);
-  heroPanel.setAttribute("aria-hidden", focusMode ? "true" : "false");
 }
 
 function updateProgress() {
@@ -129,7 +128,7 @@ function render() {
 
   if (view === "intro") {
     showProgress(false);
-    card.append(cloneTemplate("#introTemplate"));
+    renderIntroStep();
     return;
   }
 
@@ -160,6 +159,17 @@ function render() {
   }
 
   renderResult();
+}
+
+function renderIntroStep() {
+  const templates = [
+    "#welcomeTemplate",
+    "#privacyTemplate",
+    "#basisTemplate",
+    "#methodTemplate",
+    "#readyTemplate"
+  ];
+  card.append(cloneTemplate(templates[introIndex]));
 }
 
 function renderQuestion() {
@@ -239,6 +249,16 @@ function start() {
   render();
 }
 
+function nextIntro() {
+  introIndex = Math.min(introIndex + 1, 4);
+  render();
+}
+
+function previousIntro() {
+  introIndex = Math.max(introIndex - 1, 0);
+  render();
+}
+
 function goNext() {
   if (answers[questionIndex] === null) return;
 
@@ -261,6 +281,7 @@ function goBack() {
 
 function restart() {
   view = "intro";
+  introIndex = 0;
   questionIndex = 0;
   answers = Array(questions.length).fill(null);
   render();
@@ -271,6 +292,8 @@ card.addEventListener("click", (event) => {
   if (!target) return;
 
   const action = target.dataset.action;
+  if (action === "intro-next") nextIntro();
+  if (action === "intro-back") previousIntro();
   if (action === "start") start();
   if (action === "next") goNext();
   if (action === "back") goBack();

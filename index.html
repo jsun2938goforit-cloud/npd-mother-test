@@ -9,24 +9,6 @@
 </head>
 <body>
   <main class="app-shell" id="appShell" aria-live="polite">
-    <section class="hero-panel" id="heroPanel">
-      <div class="brand-row">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span>匿名自测</span>
-      </div>
-      <h1>测一测：你的妈妈是NPD吗？</h1>
-      <p>
-        这不是诊断，也不会替任何人贴标签。它只是帮你把那些说不清的压抑、内疚和小心翼翼，
-        放到一个更清晰的位置上看一看。
-      </p>
-      <div class="privacy-note">
-        <strong>请放心作答：</strong>你的回答属于你的隐私。我们不会收集你的个人信息，也不会记录你的测试答案。
-        <br><br>
-        <strong>题目依据：</strong>这套题参考 DSM-5 中对自恋型人格特质的描述，并结合母女关系里更常见的情绪勒索、边界侵犯、角色倒置和代际影响做了场景化改写。它不是诊断量表，而是一份帮助你梳理关系模式的自我觉察测试。
-      </div>
-      <p class="hero-scroll-hint">向下滑动查看测试说明</p>
-    </section>
-
     <section class="quiz-panel" id="quiz" aria-label="自测区域">
       <div class="progress-wrap" id="progressWrap" hidden>
         <div class="progress-meta">
@@ -43,40 +25,97 @@
   </main>
 
   <footer class="site-footer">
-    <strong>版权声明</strong>
-    <p>
-      本测试工具仅授权个人自测使用，未经许可不得复制、搬运、改编、转售或用于任何商业用途。
-      当前正版售卖渠道仅为小红书店铺「Jsence情绪治愈小屋」，其他渠道均非官方授权，请注意辨别。
-      后续指南及配套内容版权归版权人所有，如发现侵权或盗版售卖，将依法追究相关责任。
-    </p>
+    <span>正版渠道仅限</span>
+    <strong>小红书店铺「Jsence情绪治愈小屋」</strong>
+    <span>未经许可不得搬运、转售或商用。</span>
   </footer>
 
-  <template id="introTemplate">
-    <div class="intro">
+  <template id="welcomeTemplate">
+    <div class="intro step-screen">
+      <div class="brand-row">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>匿名自测</span>
+      </div>
       <div class="soft-icon" aria-hidden="true">。</div>
-      <h2>先确认一件事：你的感受值得被认真对待</h2>
+      <h1>测一测：你的妈妈是NPD吗？</h1>
       <p>
-        有些感受，你可能压了很久。不是因为它不重要，而是你一直不确定：
-        是不是自己太敏感了？
+        这不是诊断，也不会替任何人贴标签。它只是帮你把那些说不清的压抑、内疚和小心翼翼，放到一个更清晰的位置上看一看。
+      </p>
+      <button class="primary-btn" type="button" data-action="intro-next">继续</button>
+    </div>
+  </template>
+
+  <template id="privacyTemplate">
+    <div class="intro step-screen">
+      <div class="soft-icon" aria-hidden="true">。</div>
+      <p class="step-kicker">请放心作答</p>
+      <h2>你的回答属于你的隐私</h2>
+      <p>
+        页面不会收集你的个人信息，也不会记录你的测试答案。你只需要按照自己的真实经历来选。
+      </p>
+      <div class="step-actions">
+        <button class="secondary-btn" type="button" data-action="intro-back">返回</button>
+        <button class="primary-btn" type="button" data-action="intro-next">继续</button>
+      </div>
+    </div>
+  </template>
+
+  <template id="basisTemplate">
+    <div class="intro step-screen">
+      <div class="soft-icon" aria-hidden="true">。</div>
+      <p class="step-kicker">题目依据</p>
+      <h2>不是随便设计的问题</h2>
+      <p>
+        这套题参考 DSM-5 中对自恋型人格特质的描述，并结合母女关系里更常见的互动模式做了场景化改写。
       </p>
       <p>
-        下面 20 个问题没有标准答案。请按照你真实经历里的频率来选。
+        它不是临床量表，也不能判断任何人是否患有 NPD。它更像是一份帮助你梳理关系模式的自我觉察测试。
       </p>
-      <div class="method-card">
-        <h3>为什么是 20 道题</h3>
-        <p>
-          这份测试保留了 DSM-5 中 NPD 相关特质的 9 个核心维度，并补充了亲子关系中更高频出现的 8 类互动模式，例如煤气灯效应、沉默惩罚、边界入侵、角色倒置和忠诚绑架。
-        </p>
-        <ul>
-          <li>缺乏同理心：我的感受不重要</li>
-          <li>特权感与关系利用：你有义务满足我</li>
-          <li>需要钦佩与夸大自我：我为你牺牲了一切</li>
-          <li>亲子关系高频表现：怀疑自己、被迫站队、边界被入侵</li>
-        </ul>
+      <div class="step-actions">
+        <button class="secondary-btn" type="button" data-action="intro-back">返回</button>
+        <button class="primary-btn" type="button" data-action="intro-next">继续</button>
       </div>
-      <div class="notice">
-        本测试仅供自我觉察参考，不构成心理诊断。它不是临床量表，也不能判断任何人是否患有 NPD。每题按「经常这样」2 分、「偶尔这样」1 分、「几乎没有」0 分计算，总分 40 分。
+    </div>
+  </template>
+
+  <template id="methodTemplate">
+    <div class="intro step-screen">
+      <div class="soft-icon" aria-hidden="true">。</div>
+      <p class="step-kicker">测试方式</p>
+      <h2>20 道题，40 分制</h2>
+      <p>
+        题目覆盖 NPD 相关特质的核心维度，也补充了煤气灯效应、沉默惩罚、边界入侵、角色倒置和忠诚绑架等亲子关系高频体验。
+      </p>
+      <p>
+        每题按「经常这样」2 分、「偶尔这样」1 分、「几乎没有」0 分计算。
+      </p>
+      <div class="step-actions">
+        <button class="secondary-btn" type="button" data-action="intro-back">返回</button>
+        <button class="primary-btn" type="button" data-action="intro-next">继续</button>
       </div>
+    </div>
+  </template>
+
+  <template id="readyTemplate">
+    <div class="intro step-screen">
+      <div class="soft-icon" aria-hidden="true">。</div>
+      <p class="step-kicker">开始之前</p>
+      <h2>你的感受值得被认真对待</h2>
+      <p>
+        下面 20 个问题没有标准答案。请选最接近你真实经历的答案，不需要美化，也不需要责怪自己。
+      </p>
+      <div class="step-actions">
+        <button class="secondary-btn" type="button" data-action="intro-back">返回</button>
+        <button class="primary-btn" type="button" data-action="start">开始自测</button>
+      </div>
+    </div>
+  </template>
+
+  <template id="introTemplate">
+    <div class="intro step-screen">
+      <div class="soft-icon" aria-hidden="true">。</div>
+      <h2>你的感受值得被认真对待</h2>
+      <p>下面 20 个问题没有标准答案。请按照你真实经历里的频率来选。</p>
       <button class="primary-btn" type="button" data-action="start">开始自测</button>
     </div>
   </template>
