@@ -37,6 +37,10 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .app-shell {
   width: min(1120px, 100%);
   min-height: 100vh;
@@ -117,6 +121,20 @@ a {
 
 .privacy-note strong {
   color: #354a3b;
+}
+
+.hero-start {
+  display: none;
+  width: 100%;
+  min-height: 50px;
+  margin-top: 20px;
+  padding: 15px 18px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
 }
 
 .quiz-panel {
@@ -219,6 +237,36 @@ h2 {
   color: #7c6d65;
   font-size: 13px;
   line-height: 1.75;
+}
+
+.method-card {
+  margin: 24px 0 0;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fffaf7;
+}
+
+.method-card h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.method-card p,
+.method-card li {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.method-card p {
+  margin: 0;
+}
+
+.method-card ul {
+  margin: 12px 0 0;
+  padding-left: 18px;
 }
 
 .primary-btn,
@@ -451,6 +499,10 @@ h2 {
 
   .hero-panel p {
     font-size: 16px;
+  }
+
+  .hero-start {
+    display: block;
   }
 
   .quiz-panel {
