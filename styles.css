@@ -37,10 +37,6 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 .app-shell {
   width: min(1120px, 100%);
   min-height: 100vh;
@@ -123,18 +119,13 @@ html {
   color: #354a3b;
 }
 
-.hero-start {
+.hero-scroll-hint {
   display: none;
-  width: 100%;
-  min-height: 50px;
   margin-top: 20px;
-  padding: 15px 18px;
-  border-radius: 8px;
-  background: var(--accent);
-  color: #fff;
-  font-weight: 700;
+  color: var(--sage);
+  font-size: 14px;
+  line-height: 1.7;
   text-align: center;
-  text-decoration: none;
 }
 
 .quiz-panel {
@@ -501,7 +492,7 @@ h2 {
     font-size: 16px;
   }
 
-  .hero-start {
+  .hero-scroll-hint {
     display: block;
   }
 
