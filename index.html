@@ -21,14 +21,13 @@
       </div>
 
       <div class="card" id="card"></div>
+      <footer class="site-footer">
+        <span>正版渠道仅限</span>
+        <strong>小红书店铺「Jsence情绪治愈小屋」</strong>
+        <span>未经许可不得搬运、转售或商用；发现侵权将依法追究法律责任。</span>
+      </footer>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <span>正版渠道仅限</span>
-    <strong>小红书店铺「Jsence情绪治愈小屋」</strong>
-    <span>未经许可不得搬运、转售或商用。</span>
-  </footer>
 
   <template id="welcomeTemplate">
     <div class="intro step-screen">
@@ -36,74 +35,37 @@
         <span class="brand-mark" aria-hidden="true"></span>
         <span>匿名自测</span>
       </div>
-      <div class="soft-icon" aria-hidden="true">。</div>
+      <div class="cover-visual" aria-hidden="true">
+        <span></span>
+      </div>
       <h1>测一测：你的妈妈是NPD吗？</h1>
       <p>
-        这不是诊断，也不会替任何人贴标签。它只是帮你把那些说不清的压抑、内疚和小心翼翼，放到一个更清晰的位置上看一看。
+        如果你总是在关系里怀疑自己，也许可以先从这 20 个问题开始，看见那些被你压下去的感受。
       </p>
       <button class="primary-btn" type="button" data-action="intro-next">继续</button>
-    </div>
-  </template>
-
-  <template id="privacyTemplate">
-    <div class="intro step-screen">
-      <div class="soft-icon" aria-hidden="true">。</div>
-      <p class="step-kicker">请放心作答</p>
-      <h2>你的回答属于你的隐私</h2>
-      <p>
-        页面不会收集你的个人信息，也不会记录你的测试答案。你只需要按照自己的真实经历来选。
-      </p>
-      <div class="step-actions">
-        <button class="secondary-btn" type="button" data-action="intro-back">返回</button>
-        <button class="primary-btn" type="button" data-action="intro-next">继续</button>
-      </div>
-    </div>
-  </template>
-
-  <template id="basisTemplate">
-    <div class="intro step-screen">
-      <div class="soft-icon" aria-hidden="true">。</div>
-      <p class="step-kicker">题目依据</p>
-      <h2>不是随便设计的问题</h2>
-      <p>
-        这套题参考 DSM-5 中对自恋型人格特质的描述，并结合母女关系里更常见的互动模式做了场景化改写。
-      </p>
-      <p>
-        它不是临床量表，也不能判断任何人是否患有 NPD。它更像是一份帮助你梳理关系模式的自我觉察测试。
-      </p>
-      <div class="step-actions">
-        <button class="secondary-btn" type="button" data-action="intro-back">返回</button>
-        <button class="primary-btn" type="button" data-action="intro-next">继续</button>
-      </div>
     </div>
   </template>
 
   <template id="methodTemplate">
     <div class="intro step-screen">
       <div class="soft-icon" aria-hidden="true">。</div>
-      <p class="step-kicker">测试方式</p>
-      <h2>20 道题，40 分制</h2>
-      <p>
-        题目覆盖 NPD 相关特质的核心维度，也补充了煤气灯效应、沉默惩罚、边界入侵、角色倒置和忠诚绑架等亲子关系高频体验。
-      </p>
-      <p>
-        每题按「经常这样」2 分、「偶尔这样」1 分、「几乎没有」0 分计算。
-      </p>
-      <div class="step-actions">
-        <button class="secondary-btn" type="button" data-action="intro-back">返回</button>
-        <button class="primary-btn" type="button" data-action="intro-next">继续</button>
+      <p class="step-kicker">开始前，知道这三件事就够了</p>
+      <h2>这是一份自我觉察测试</h2>
+      <div class="info-pills">
+        <div>
+          <strong>隐私</strong>
+          <span>不收集个人信息，不记录测试答案。</span>
+        </div>
+        <div>
+          <strong>依据</strong>
+          <span>参考 DSM-5 相关特质，并结合母女关系场景改写。</span>
+        </div>
+        <div>
+          <strong>计分</strong>
+          <span>20 题，40 分制；结果只用于自我觉察。</span>
+        </div>
       </div>
-    </div>
-  </template>
-
-  <template id="readyTemplate">
-    <div class="intro step-screen">
-      <div class="soft-icon" aria-hidden="true">。</div>
-      <p class="step-kicker">开始之前</p>
-      <h2>你的感受值得被认真对待</h2>
-      <p>
-        下面 20 个问题没有标准答案。请选最接近你真实经历的答案，不需要美化，也不需要责怪自己。
-      </p>
+      <p class="micro-copy">它不是临床诊断，也不能判断任何人是否患有 NPD。</p>
       <div class="step-actions">
         <button class="secondary-btn" type="button" data-action="intro-back">返回</button>
         <button class="primary-btn" type="button" data-action="start">开始自测</button>

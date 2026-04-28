@@ -164,10 +164,7 @@ function render() {
 function renderIntroStep() {
   const templates = [
     "#welcomeTemplate",
-    "#privacyTemplate",
-    "#basisTemplate",
-    "#methodTemplate",
-    "#readyTemplate"
+    "#methodTemplate"
   ];
   card.append(cloneTemplate(templates[introIndex]));
 }
@@ -250,7 +247,7 @@ function start() {
 }
 
 function nextIntro() {
-  introIndex = Math.min(introIndex + 1, 4);
+  introIndex = Math.min(introIndex + 1, 1);
   render();
 }
 
