@@ -103,7 +103,7 @@ const resultIllustrations = {
       <rect x="20" y="18" width="140" height="140" rx="32" fill="#eef4ef"/>
       <ellipse cx="90" cy="141" rx="48" ry="9" fill="#d8cec8" opacity=".62"/>
       <circle cx="90" cy="78" r="27" fill="#f2d8ca"/>
-      <path d="M57 74c16-30 61-31 77 1-24-4-52-4-77-1Z" fill="#4f433c"/>
+      <path d="M56 76c15-32 53-39 78 0-25-5-53-5-78 0Z" fill="#4f433c"/>
       <path d="M49 139c8-38 74-38 82 0Z" fill="#8fa694"/>
       <rect x="62" y="107" width="56" height="44" rx="18" fill="#8fa694"/>
     </svg>
@@ -113,7 +113,7 @@ const resultIllustrations = {
       <rect x="20" y="18" width="140" height="140" rx="32" fill="#f3ece8"/>
       <ellipse cx="90" cy="141" rx="48" ry="9" fill="#c9b9b0" opacity=".62"/>
       <circle cx="90" cy="78" r="27" fill="#f2d8ca"/>
-      <path d="M57 74c16-30 61-31 77 1-24-4-52-4-77-1Z" fill="#3f3632"/>
+      <path d="M56 76c15-32 53-39 78 0-25-5-53-5-78 0Z" fill="#3f3632"/>
       <path d="M49 139c8-39 74-39 82 0Z" fill="#9b6f62"/>
       <rect x="60" y="106" width="60" height="46" rx="18" fill="#9b6f62"/>
     </svg>
@@ -123,7 +123,7 @@ const resultIllustrations = {
       <rect x="20" y="18" width="140" height="140" rx="32" fill="#f2e9e4"/>
       <ellipse cx="90" cy="142" rx="50" ry="10" fill="#b9a8a0" opacity=".58"/>
       <circle cx="90" cy="78" r="27" fill="#f2d8ca"/>
-      <path d="M57 74c16-30 61-31 77 1-24-4-52-4-77-1Z" fill="#2f2926"/>
+      <path d="M56 76c15-32 53-39 78 0-25-5-53-5-78 0Z" fill="#2f2926"/>
       <path d="M48 140c8-41 76-41 84 0Z" fill="#66544c"/>
       <rect x="58" y="105" width="64" height="48" rx="18" fill="#66544c"/>
     </svg>
