@@ -133,9 +133,17 @@
 
   <template id="resultTemplate">
     <div class="result">
-      <p class="result-level" id="resultLevel"></p>
-      <h2 id="resultTitle"></h2>
-      <p class="score-line" id="scoreLine"></p>
+      <div class="result-hero" id="resultHero">
+        <div class="result-avatar" id="resultAvatar" aria-hidden="true">
+          <span></span>
+        </div>
+        <div class="result-summary">
+          <p class="result-level" id="resultLevel"></p>
+          <h2 id="resultTitle"></h2>
+          <p class="score-line" id="scoreLine"></p>
+          <p class="result-tagline" id="resultTagline"></p>
+        </div>
+      </div>
       <div class="result-copy" id="resultCopy"></div>
       <div class="score-guide">
         <h3>分数怎么看</h3>

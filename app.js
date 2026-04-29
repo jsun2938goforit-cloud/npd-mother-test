@@ -60,7 +60,9 @@ const results = [
     min: 0,
     max: 13,
     level: "轻度感知",
+    avatar: "light",
     title: "你们之间有摩擦，但你的感受值得被认真对待",
+    tagline: "像一阵偶尔吹乱心绪的风，你已经开始分辨哪些感受属于自己。",
     band: "这一档通常表示关系里存在一些不舒服的互动，但未必形成稳定的高压模式。你可以先从记录感受和观察边界开始，不需要急着下结论。",
     body: [
       "你感受到的困扰是真实的。它可能更多来自两代人之间不同的表达方式，也可能来自长期没有被好好回应的需求。",
@@ -71,7 +73,9 @@ const results = [
     min: 14,
     max: 26,
     level: "中度感知",
+    avatar: "medium",
     title: "你可能花了很多年，在一段需要小心翼翼的关系里",
+    tagline: "你不是太敏感，你只是长期学会了先看她的脸色，再安放自己的感受。",
     band: "这一档说明这些互动可能已经反复出现，并影响你对自己的判断。你也许经常自我怀疑、压低需求，或习惯先照顾她的情绪。",
     body: [
       "这些模式可能已经在影响你对自己的看法。你也许花了很多年在猜测别人的情绪、压缩自己的需求、怀疑自己是不是太敏感。",
@@ -82,7 +86,9 @@ const results = [
     min: 27,
     max: 40,
     level: "高度感知",
+    avatar: "high",
     title: "你不是一个人，很多女儿都在慢慢把自己找回来",
+    tagline: "这更像一段长期高压的关系痕迹。现在重要的不是证明谁有病，而是先把你保护好。",
     band: "这一档表示多个关系模式可能长期叠加，并对你的亲密关系、安全感和自我价值感造成明显影响。建议你把自我保护、边界练习和专业支持放到更重要的位置。",
     body: [
       "你描述的这些模式，可能已经系统性地影响了你对自己的认知和对关系的期待。你也许很早就学会了：我的感受不重要，我需要先满足她。",
@@ -206,10 +212,13 @@ function renderResult() {
   const fragment = cloneTemplate("#resultTemplate");
   const copy = fragment.querySelector("#resultCopy");
   const scoreBands = fragment.querySelector("#scoreBands");
+  const avatar = fragment.querySelector("#resultAvatar");
 
+  avatar.classList.add(`is-${result.avatar}`);
   fragment.querySelector("#resultLevel").textContent = result.level;
   fragment.querySelector("#resultTitle").textContent = result.title;
-  fragment.querySelector("#scoreLine").textContent = `本次得分：${score} / 40，对应「${result.level}」。你的回答属于你的隐私，页面不会记录这次结果。`;
+  fragment.querySelector("#scoreLine").textContent = `本次得分 ${score} / 40`;
+  fragment.querySelector("#resultTagline").textContent = result.tagline;
 
   result.body.forEach((paragraph) => {
     const p = document.createElement("p");
