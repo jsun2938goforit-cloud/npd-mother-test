@@ -97,6 +97,49 @@ const results = [
   }
 ];
 
+const resultIllustrations = {
+  light: `
+    <svg viewBox="0 0 180 180" role="img" aria-label="轻度感知插图">
+      <rect x="22" y="18" width="136" height="136" rx="28" fill="#eef4ef"/>
+      <circle cx="122" cy="48" r="26" fill="#fffaf7"/>
+      <path d="M49 126c18-27 45-28 68 0" fill="none" stroke="#87a08e" stroke-width="12" stroke-linecap="round"/>
+      <path d="M57 111c15-14 40-14 55 0" fill="none" stroke="#9b6f62" stroke-width="8" stroke-linecap="round" opacity=".58"/>
+      <circle cx="84" cy="73" r="25" fill="#f2d8ca"/>
+      <path d="M55 70c15-29 59-32 79 0-25-4-54-4-79 0Z" fill="#4f433c"/>
+      <path d="M106 124c14-18 28-26 44-24" fill="none" stroke="#87a08e" stroke-width="8" stroke-linecap="round"/>
+      <path d="M142 101c-5 17-17 24-32 23 5-15 16-24 32-23Z" fill="#9db19f"/>
+      <path d="M63 139h77" stroke="#d8cec8" stroke-width="8" stroke-linecap="round"/>
+    </svg>
+  `,
+  medium: `
+    <svg viewBox="0 0 180 180" role="img" aria-label="中度感知插图">
+      <rect x="22" y="18" width="136" height="136" rx="28" fill="#f3ece8"/>
+      <path d="M36 82c10-35 39-55 72-50 24 4 43 22 50 50H36Z" fill="#7f9484"/>
+      <path d="M58 82c7-23 27-37 50-34 17 3 30 15 35 34H58Z" fill="#6d8172"/>
+      <path d="M90 80v62" stroke="#5a504b" stroke-width="7" stroke-linecap="round"/>
+      <path d="M90 141c0 13 18 13 18 0" fill="none" stroke="#5a504b" stroke-width="7" stroke-linecap="round"/>
+      <circle cx="91" cy="91" r="24" fill="#f2d8ca"/>
+      <path d="M64 87c16-22 51-23 66 2-22-3-44-3-66-2Z" fill="#4f433c"/>
+      <path d="M62 137c10-24 48-25 58 0" fill="none" stroke="#9b6f62" stroke-width="16" stroke-linecap="round"/>
+      <path d="M42 120c10 8 18 8 29 0" fill="none" stroke="#d8cec8" stroke-width="6" stroke-linecap="round" opacity=".8"/>
+      <path d="M119 120c10 8 18 8 29 0" fill="none" stroke="#d8cec8" stroke-width="6" stroke-linecap="round" opacity=".8"/>
+    </svg>
+  `,
+  high: `
+    <svg viewBox="0 0 180 180" role="img" aria-label="高度感知插图">
+      <rect x="22" y="18" width="136" height="136" rx="28" fill="#f2e9e4"/>
+      <path d="M44 126h92" stroke="#9b6f62" stroke-width="14" stroke-linecap="round" opacity=".5"/>
+      <path d="M48 102h84" stroke="#9b6f62" stroke-width="14" stroke-linecap="round" opacity=".42"/>
+      <path d="M63 143c10-26 44-28 56 0" fill="none" stroke="#66544c" stroke-width="18" stroke-linecap="round"/>
+      <circle cx="91" cy="79" r="25" fill="#f2d8ca"/>
+      <path d="M61 75c14-27 57-29 72 1-23-4-48-4-72-1Z" fill="#332d29"/>
+      <path d="M35 134c18-54 91-76 123-17" fill="none" stroke="#6d8172" stroke-width="10" stroke-linecap="round" opacity=".62"/>
+      <path d="M43 141c21-37 72-53 102-13" fill="none" stroke="#6d8172" stroke-width="6" stroke-linecap="round" opacity=".4"/>
+      <path d="M53 48c10-8 22-12 36-12 25 0 47 15 57 39" fill="none" stroke="#fffaf7" stroke-width="18" stroke-linecap="round" opacity=".78"/>
+    </svg>
+  `
+};
+
 let view = "intro";
 let introIndex = 0;
 let questionIndex = 0;
@@ -215,6 +258,7 @@ function renderResult() {
   const avatar = fragment.querySelector("#resultAvatar");
 
   avatar.classList.add(`is-${result.avatar}`);
+  avatar.innerHTML = resultIllustrations[result.avatar];
   fragment.querySelector("#resultLevel").textContent = result.level;
   fragment.querySelector("#resultTitle").textContent = result.title;
   fragment.querySelector("#scoreLine").textContent = `本次得分 ${score} / 40`;
