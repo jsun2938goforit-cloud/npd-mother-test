@@ -101,43 +101,31 @@ const resultIllustrations = {
   light: `
     <svg viewBox="0 0 180 180" role="img" aria-label="轻度感知插图">
       <rect x="20" y="18" width="140" height="140" rx="32" fill="#eef4ef"/>
-      <circle cx="122" cy="50" r="25" fill="#fffaf7" opacity=".88"/>
       <ellipse cx="90" cy="141" rx="48" ry="9" fill="#d8cec8" opacity=".62"/>
       <circle cx="90" cy="78" r="27" fill="#f2d8ca"/>
       <path d="M57 74c16-30 61-31 77 1-24-4-52-4-77-1Z" fill="#4f433c"/>
-      <path d="M51 135c8-31 70-31 78 0" fill="#8fa694"/>
-      <path d="M51 135c8-31 70-31 78 0" fill="none" stroke="#8fa694" stroke-width="18" stroke-linecap="round"/>
-      <path d="M56 134c14-16 54-16 68 0" fill="none" stroke="#78907e" stroke-width="6" stroke-linecap="round" opacity=".72"/>
-      <path d="M121 122c11-17 26-24 42-22-5 18-18 27-39 27" fill="#9db19f"/>
-      <path d="M125 126c9-11 21-18 35-22" fill="none" stroke="#78907e" stroke-width="5" stroke-linecap="round"/>
+      <path d="M49 139c8-38 74-38 82 0Z" fill="#8fa694"/>
+      <rect x="62" y="107" width="56" height="44" rx="18" fill="#8fa694"/>
     </svg>
   `,
   medium: `
     <svg viewBox="0 0 180 180" role="img" aria-label="中度感知插图">
       <rect x="20" y="18" width="140" height="140" rx="32" fill="#f3ece8"/>
-      <circle cx="123" cy="50" r="25" fill="#fffaf7" opacity=".76"/>
       <ellipse cx="90" cy="141" rx="48" ry="9" fill="#c9b9b0" opacity=".62"/>
       <circle cx="90" cy="78" r="27" fill="#f2d8ca"/>
       <path d="M57 74c16-30 61-31 77 1-24-4-52-4-77-1Z" fill="#3f3632"/>
-      <path d="M50 136c8-34 72-34 80 0" fill="#9b6f62"/>
-      <path d="M50 136c8-34 72-34 80 0" fill="none" stroke="#9b6f62" stroke-width="18" stroke-linecap="round"/>
-      <path d="M56 134c14-17 54-17 68 0" fill="none" stroke="#7d584e" stroke-width="6" stroke-linecap="round" opacity=".7"/>
-      <path d="M38 104c16 10 28 10 42 0" fill="none" stroke="#d8cec8" stroke-width="7" stroke-linecap="round" opacity=".86"/>
-      <path d="M100 104c16 10 28 10 42 0" fill="none" stroke="#d8cec8" stroke-width="7" stroke-linecap="round" opacity=".86"/>
+      <path d="M49 139c8-39 74-39 82 0Z" fill="#9b6f62"/>
+      <rect x="60" y="106" width="60" height="46" rx="18" fill="#9b6f62"/>
     </svg>
   `,
   high: `
     <svg viewBox="0 0 180 180" role="img" aria-label="高度感知插图">
       <rect x="20" y="18" width="140" height="140" rx="32" fill="#f2e9e4"/>
-      <circle cx="123" cy="50" r="25" fill="#fffaf7" opacity=".66"/>
       <ellipse cx="90" cy="142" rx="50" ry="10" fill="#b9a8a0" opacity=".58"/>
       <circle cx="90" cy="78" r="27" fill="#f2d8ca"/>
       <path d="M57 74c16-30 61-31 77 1-24-4-52-4-77-1Z" fill="#2f2926"/>
-      <path d="M49 137c8-36 74-36 82 0" fill="#66544c"/>
-      <path d="M49 137c8-36 74-36 82 0" fill="none" stroke="#66544c" stroke-width="18" stroke-linecap="round"/>
-      <path d="M55 134c14-18 56-18 70 0" fill="none" stroke="#4f433c" stroke-width="6" stroke-linecap="round" opacity=".72"/>
-      <path d="M35 128c17-49 92-67 124-10" fill="none" stroke="#7f9484" stroke-width="8" stroke-linecap="round" opacity=".46"/>
-      <path d="M43 139c23-33 70-45 103-8" fill="none" stroke="#7f9484" stroke-width="5" stroke-linecap="round" opacity=".32"/>
+      <path d="M48 140c8-41 76-41 84 0Z" fill="#66544c"/>
+      <rect x="58" y="105" width="64" height="48" rx="18" fill="#66544c"/>
     </svg>
   `
 };
@@ -202,7 +190,7 @@ function render() {
     window.setTimeout(() => {
       view = "question";
       render();
-    }, 3200);
+    }, 2800);
     return;
   }
 

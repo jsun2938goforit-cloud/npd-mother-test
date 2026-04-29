@@ -409,21 +409,21 @@ h2 {
 }
 
 .privacy-visual::before {
-  width: 44px;
-  height: 34px;
-  left: 24px;
-  bottom: 20px;
+  width: 46px;
+  height: 36px;
+  left: 23px;
+  top: 43px;
   border-radius: 8px;
   background: var(--sage);
   box-shadow: 0 8px 18px rgba(109, 129, 114, 0.24);
 }
 
 .privacy-visual::after {
-  width: 34px;
-  height: 30px;
-  left: 29px;
-  top: 21px;
-  border: 7px solid var(--sage);
+  width: 32px;
+  height: 28px;
+  left: 30px;
+  top: 20px;
+  border: 6px solid var(--sage);
   border-bottom: 0;
   border-radius: 18px 18px 0 0;
 }
@@ -432,7 +432,7 @@ h2 {
   width: 8px;
   height: 18px;
   left: 42px;
-  bottom: 28px;
+  top: 52px;
   border-radius: 999px;
   background: rgba(255, 253, 251, 0.82);
 }
@@ -855,7 +855,7 @@ h2 {
 
   .result-avatar {
     width: 178px;
-    height: 154px;
+    height: 178px;
     margin: 0 auto;
   }
 
@@ -876,11 +876,11 @@ h2 {
   }
 
   .privacy-visual::before {
-    left: calc(50% - 22px);
+    left: calc(50% - 23px);
   }
 
   .privacy-visual::after {
-    left: calc(50% - 17px);
+    left: calc(50% - 22px);
   }
 
   .privacy-visual span {
