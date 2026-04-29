@@ -397,7 +397,6 @@ h2 {
   border-radius: 16px;
   overflow: hidden;
   background:
-    radial-gradient(circle at 72% 18%, rgba(255, 253, 251, 0.92) 0 16px, transparent 17px),
     linear-gradient(135deg, rgba(232, 239, 233, 0.96), rgba(243, 231, 226, 0.94));
 }
 
@@ -441,7 +440,7 @@ h2 {
 .basis-visual::before {
   width: 54px;
   height: 64px;
-  left: 19px;
+  left: 18px;
   top: 16px;
   border-radius: 8px;
   background: rgba(255, 253, 251, 0.88);
@@ -452,7 +451,7 @@ h2 {
 .basis-visual::after {
   width: 34px;
   height: 4px;
-  left: 30px;
+  left: 29px;
   top: 36px;
   border-radius: 999px;
   background: var(--accent);
@@ -462,7 +461,7 @@ h2 {
 .basis-visual span {
   width: 18px;
   height: 18px;
-  right: 15px;
+  right: 14px;
   bottom: 14px;
   border: 3px solid var(--sage);
   border-radius: 999px;
@@ -471,7 +470,7 @@ h2 {
 .score-visual::before {
   width: 12px;
   height: 42px;
-  left: 25px;
+  left: 23px;
   bottom: 20px;
   border-radius: 999px 999px 4px 4px;
   background: rgba(109, 129, 114, 0.62);
@@ -481,7 +480,7 @@ h2 {
 .score-visual::after {
   width: 58px;
   height: 2px;
-  left: 18px;
+  left: 17px;
   bottom: 18px;
   background: rgba(48, 42, 39, 0.16);
 }
@@ -489,7 +488,7 @@ h2 {
 .score-visual span {
   width: 20px;
   height: 20px;
-  right: 14px;
+  right: 13px;
   top: 16px;
   border-radius: 999px;
   background: rgba(255, 253, 251, 0.9);

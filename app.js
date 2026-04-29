@@ -100,42 +100,44 @@ const results = [
 const resultIllustrations = {
   light: `
     <svg viewBox="0 0 180 180" role="img" aria-label="轻度感知插图">
-      <rect x="22" y="18" width="136" height="136" rx="28" fill="#eef4ef"/>
-      <circle cx="122" cy="48" r="26" fill="#fffaf7"/>
-      <path d="M49 126c18-27 45-28 68 0" fill="none" stroke="#87a08e" stroke-width="12" stroke-linecap="round"/>
-      <path d="M57 111c15-14 40-14 55 0" fill="none" stroke="#9b6f62" stroke-width="8" stroke-linecap="round" opacity=".58"/>
-      <circle cx="84" cy="73" r="25" fill="#f2d8ca"/>
-      <path d="M55 70c15-29 59-32 79 0-25-4-54-4-79 0Z" fill="#4f433c"/>
-      <path d="M106 124c14-18 28-26 44-24" fill="none" stroke="#87a08e" stroke-width="8" stroke-linecap="round"/>
-      <path d="M142 101c-5 17-17 24-32 23 5-15 16-24 32-23Z" fill="#9db19f"/>
-      <path d="M63 139h77" stroke="#d8cec8" stroke-width="8" stroke-linecap="round"/>
+      <rect x="20" y="18" width="140" height="140" rx="32" fill="#eef4ef"/>
+      <circle cx="122" cy="50" r="25" fill="#fffaf7" opacity=".88"/>
+      <ellipse cx="90" cy="141" rx="48" ry="9" fill="#d8cec8" opacity=".62"/>
+      <circle cx="90" cy="78" r="27" fill="#f2d8ca"/>
+      <path d="M57 74c16-30 61-31 77 1-24-4-52-4-77-1Z" fill="#4f433c"/>
+      <path d="M51 135c8-31 70-31 78 0" fill="#8fa694"/>
+      <path d="M51 135c8-31 70-31 78 0" fill="none" stroke="#8fa694" stroke-width="18" stroke-linecap="round"/>
+      <path d="M56 134c14-16 54-16 68 0" fill="none" stroke="#78907e" stroke-width="6" stroke-linecap="round" opacity=".72"/>
+      <path d="M121 122c11-17 26-24 42-22-5 18-18 27-39 27" fill="#9db19f"/>
+      <path d="M125 126c9-11 21-18 35-22" fill="none" stroke="#78907e" stroke-width="5" stroke-linecap="round"/>
     </svg>
   `,
   medium: `
     <svg viewBox="0 0 180 180" role="img" aria-label="中度感知插图">
-      <rect x="22" y="18" width="136" height="136" rx="28" fill="#f3ece8"/>
-      <path d="M36 82c10-35 39-55 72-50 24 4 43 22 50 50H36Z" fill="#7f9484"/>
-      <path d="M58 82c7-23 27-37 50-34 17 3 30 15 35 34H58Z" fill="#6d8172"/>
-      <path d="M90 80v62" stroke="#5a504b" stroke-width="7" stroke-linecap="round"/>
-      <path d="M90 141c0 13 18 13 18 0" fill="none" stroke="#5a504b" stroke-width="7" stroke-linecap="round"/>
-      <circle cx="91" cy="91" r="24" fill="#f2d8ca"/>
-      <path d="M64 87c16-22 51-23 66 2-22-3-44-3-66-2Z" fill="#4f433c"/>
-      <path d="M62 137c10-24 48-25 58 0" fill="none" stroke="#9b6f62" stroke-width="16" stroke-linecap="round"/>
-      <path d="M42 120c10 8 18 8 29 0" fill="none" stroke="#d8cec8" stroke-width="6" stroke-linecap="round" opacity=".8"/>
-      <path d="M119 120c10 8 18 8 29 0" fill="none" stroke="#d8cec8" stroke-width="6" stroke-linecap="round" opacity=".8"/>
+      <rect x="20" y="18" width="140" height="140" rx="32" fill="#f3ece8"/>
+      <circle cx="123" cy="50" r="25" fill="#fffaf7" opacity=".76"/>
+      <ellipse cx="90" cy="141" rx="48" ry="9" fill="#c9b9b0" opacity=".62"/>
+      <circle cx="90" cy="78" r="27" fill="#f2d8ca"/>
+      <path d="M57 74c16-30 61-31 77 1-24-4-52-4-77-1Z" fill="#3f3632"/>
+      <path d="M50 136c8-34 72-34 80 0" fill="#9b6f62"/>
+      <path d="M50 136c8-34 72-34 80 0" fill="none" stroke="#9b6f62" stroke-width="18" stroke-linecap="round"/>
+      <path d="M56 134c14-17 54-17 68 0" fill="none" stroke="#7d584e" stroke-width="6" stroke-linecap="round" opacity=".7"/>
+      <path d="M38 104c16 10 28 10 42 0" fill="none" stroke="#d8cec8" stroke-width="7" stroke-linecap="round" opacity=".86"/>
+      <path d="M100 104c16 10 28 10 42 0" fill="none" stroke="#d8cec8" stroke-width="7" stroke-linecap="round" opacity=".86"/>
     </svg>
   `,
   high: `
     <svg viewBox="0 0 180 180" role="img" aria-label="高度感知插图">
-      <rect x="22" y="18" width="136" height="136" rx="28" fill="#f2e9e4"/>
-      <path d="M44 126h92" stroke="#9b6f62" stroke-width="14" stroke-linecap="round" opacity=".5"/>
-      <path d="M48 102h84" stroke="#9b6f62" stroke-width="14" stroke-linecap="round" opacity=".42"/>
-      <path d="M63 143c10-26 44-28 56 0" fill="none" stroke="#66544c" stroke-width="18" stroke-linecap="round"/>
-      <circle cx="91" cy="79" r="25" fill="#f2d8ca"/>
-      <path d="M61 75c14-27 57-29 72 1-23-4-48-4-72-1Z" fill="#332d29"/>
-      <path d="M35 134c18-54 91-76 123-17" fill="none" stroke="#6d8172" stroke-width="10" stroke-linecap="round" opacity=".62"/>
-      <path d="M43 141c21-37 72-53 102-13" fill="none" stroke="#6d8172" stroke-width="6" stroke-linecap="round" opacity=".4"/>
-      <path d="M53 48c10-8 22-12 36-12 25 0 47 15 57 39" fill="none" stroke="#fffaf7" stroke-width="18" stroke-linecap="round" opacity=".78"/>
+      <rect x="20" y="18" width="140" height="140" rx="32" fill="#f2e9e4"/>
+      <circle cx="123" cy="50" r="25" fill="#fffaf7" opacity=".66"/>
+      <ellipse cx="90" cy="142" rx="50" ry="10" fill="#b9a8a0" opacity=".58"/>
+      <circle cx="90" cy="78" r="27" fill="#f2d8ca"/>
+      <path d="M57 74c16-30 61-31 77 1-24-4-52-4-77-1Z" fill="#2f2926"/>
+      <path d="M49 137c8-36 74-36 82 0" fill="#66544c"/>
+      <path d="M49 137c8-36 74-36 82 0" fill="none" stroke="#66544c" stroke-width="18" stroke-linecap="round"/>
+      <path d="M55 134c14-18 56-18 70 0" fill="none" stroke="#4f433c" stroke-width="6" stroke-linecap="round" opacity=".72"/>
+      <path d="M35 128c17-49 92-67 124-10" fill="none" stroke="#7f9484" stroke-width="8" stroke-linecap="round" opacity=".46"/>
+      <path d="M43 139c23-33 70-45 103-8" fill="none" stroke="#7f9484" stroke-width="5" stroke-linecap="round" opacity=".32"/>
     </svg>
   `
 };
@@ -200,7 +202,7 @@ function render() {
     window.setTimeout(() => {
       view = "question";
       render();
-    }, 3800);
+    }, 3200);
     return;
   }
 
